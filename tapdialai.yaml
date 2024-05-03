@@ -24,7 +24,6 @@ trigger:
     entity_id: !input 'hue_tap_switch'
     to: '1_rotate_left'
   # Fügen Sie hier die weiteren Zustände für die anderen Tasten hinzu
-
 action:
   - choose:
       - conditions:
@@ -44,7 +43,6 @@ action:
         sequence:
           # Aktionen für Taste 1 - Drehen nach links
       # Fügen Sie hier die `choose` Sequenzen für die anderen Tasten hinzu
-
 # Beispiel für Taste 2
   - choose:
       - conditions:
@@ -64,7 +62,6 @@ action:
         sequence:
           # Aktionen für Taste 2 - Drehen nach links
 # Wiederholen Sie diesen Abschnitt für Taste 3 und 4 mit den entsprechenden Zuständen
-
 # Beispiel für Taste 3
   - choose:
       - conditions:
@@ -83,7 +80,6 @@ action:
           - "{{ trigger.to_state.state == '3_rotate_left' }}"
         sequence:
           # Aktionen für Taste 3 - Drehen nach links
-		  
 # Beispiel für Taste 4
   - choose:
       - conditions:
